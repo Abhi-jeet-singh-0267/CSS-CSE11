@@ -24,3 +24,31 @@ nav ul{
     justify-content:space-around;
     display: flex;
 }
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #74a731;
+    padding: irem;
+    /* position: absolute; */
+}
+
+.menu a{
+    color: #fff;
+    padding: lem;
+    text-decoration: none;
+    display: block;
+}
+
+.hemburger{
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+@media(min-width:768px){
+    .menu{
+        display: flex;
+        flex-direction: row;
+        position:static;
+    }
+}

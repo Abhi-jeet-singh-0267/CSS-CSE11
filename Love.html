@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Love Test</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(to right, #ff2d55, #ff3b3b);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      background: #f1f1f1;
+      width: 380px;
+      padding: 40px 30px;
+      border-radius: 25px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+      color: #e11d48;
+      margin-bottom: 30px;
+     font-size: 24px;
+    }
+
+    .btns {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      position: relative;
+    }
+
+    button {
+      padding: 12px 28px;
+      border-radius: 30px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .yes {
+      background: green;
+      color: white;
+    }
+
+    .no {
+      background: red;
+      color: white;
+      position: absolute;
+      left: 180px;
+    }
+
+    .msg {
+     margin-top: 25px;
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Do you love me? 🥺</h2>
+
+    <div class="btns">
+      <button class="yes" onclick="alert('I Love You Too ❤')">Yes 💖</button>
+      <button class="no" id="noBtn">No 👀</button>
+    </div>
+
+    <div class="msg">No is disabled 😎</div>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById("noBtn");
+
+    noBtn.addEventListener("mouseover", function () {
+      const x = Math.floor(Math.random() * 300) - 150;
+      const y = Math.floor(Math.random() * 200) - 100;
+
+      noBtn.style.transform = translate(${x}px, ${y}px);
+    });
+  </script>
+
+</body>
+</html>
